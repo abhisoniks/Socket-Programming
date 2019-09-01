@@ -9,9 +9,10 @@ In this assignment, we will build a simple client-server system, where you use t
 - The client should display the server's reply to the user, and prompt the user for the next input, until the user terminates the client program with Ctrl+C.
 <br>
 You are provided with the client (source code). You will write three versions of the server: <br>
-- Your server program "server1" will be a single process server that can handle only one client at a time. If a second client  tries to chat with the server while one client's session is already in progress, the second client's socket operations should see an error.
-- Your server program "server2" will be a multi-process server that will fork a process for every new client it receives. Multiple clients should be able to simultaneously chat with the server.
+- Your server program "server1" will be a single process server that can handle only one client at a time. If a second client  tries to chat with the server while one client's session is already in progress, the second client's socket operations should see an error. <br>
+- Your server program "server2" will be a multi-process server that will fork a process for every new client it receives. Multiple clients should be able to simultaneously chat with the server. <br>
 - Your server program "server3" will be a single process server that uses the "select" system call to handle multiple clients. Again, much like server2, server3 will also be able to handle multiple clients concurrently.
+<br>
 <br>
 At the very minimum, all your servers should be able to handle addition, multiplication, subtraction, and division operations on two integer operands. You may also assume that the two operands are separated by a space. So, some sample test cases are:<br>
 
@@ -19,6 +20,7 @@ User types: 1 + 2, server replies 3 <br>
 User types: 2 * 3, server replies 6 <br>
 User types: 4 - 7, server replies -3 <br>
 User types: 30 / 10, server replies 3 <br>
+
 Note that the actual test cases we will use may be different from the ones shown above: your servers should correctly work with any numbers, not just the ones shown above, as long as they confirm to this format. Handling non-integer operands, other arithmatic operations, or operations with more than 2 operands (e.g., "1 + 2 + 3") is purely optional. <br>
 
 # The client
@@ -44,9 +46,7 @@ Sending reply: 66
 Client socket 4 sent message: 3 * 4
 Sending reply: 12
 ```
-...
-...
-The servers
+
 
 # Part1: Single process server
 
